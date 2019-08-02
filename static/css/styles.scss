@@ -1,0 +1,144 @@
+@import "../../static/css/font-awesome.min.css";
+@import "../../static/css/bootstrap.min.css";
+@import "../../static/css/style.css";
+@import "~animate.css/animate.css";
+
+@font-face {
+  font-family: Sahel;
+  src: url('/static/fonts/Sahel.eot');
+  src: url('/static/fonts/Sahel.eot?#iefix') format('embedded-opentype'),
+  url('/static/fonts/Sahel.woff') format('woff'),
+  url('/static/fonts/Sahel.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Sahel;
+  src: url('/static/fonts/Sahel-Bold.eot');
+  src: url('/static/fonts/Sahel-Bold.eot?#iefix') format('embedded-opentype'),
+  url('/static/fonts/Sahel-Bold.woff') format('woff'),
+  url('/static/fonts/Sahel-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Sahel;
+  src: url('/static/fonts/Sahel-Black.eot');
+  src: url('/static/fonts/Sahel-Black.eot?#iefix') format('embedded-opentype'),
+  url('/static/fonts/Sahel-Black.woff') format('woff'),
+  url('/static/fonts/Sahel-Black.ttf') format('truetype');
+  font-weight: 900;
+}
+html,
+body {
+  font-family: sahel  , serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: sahel  , serif;
+}
+body {
+  direction: rtl
+}
+.header-btn {
+  float: left;
+}
+
+.portfolio-item .pi-inner h2 {
+  left: 0;
+  right: 50px;
+}
+
+.site-logo {
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.section-title {
+  font-weight: 900;
+  font-size: 40px;
+}
+.main-menu li:hover {
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+.main-menu a:hover {
+  text-decoration: underline;
+}
+
+.social-links a {
+  font-size: 23px;
+  transition: border-color .2s ease-in-out,color .2s ease-in-out;
+}
+
+.social-links a {
+  font-size: 23px;
+}
+
+.site-logo a {
+  color: #001418 !important;
+}
+.site-logo a:hover {
+  color: #001418 !important;
+}
+
+span.fa {
+  transition: border-color .2s ease-in-out,color .2s ease-in-out;
+}
+span.fa:hover {
+  transition: border-color .2s ease-in-out,color .2s ease-in-out;
+}
+span.fa-gitlab:hover {
+  color: #FC6D27;
+}
+span.fa-github:hover {
+  color: #333;
+}
+span.fa-twitter:hover {
+  color: #55acee;
+}
+span.fa-telegram:hover {
+  color: #0088cc;
+}
+span.fa-instagram:hover {
+  color: #d6249f;
+}
+
+@media only screen and (max-width: 767px) {
+  .nav-switch {
+    left: 25px;
+    right: auto;
+  }
+}
+
+.avatar-intro-section {
+  max-width: 190px;
+  margin-bottom: 35px;
+}
+
+.intro-section {
+  padding: 90px 0;
+}
+
+.show-main-menu {
+  display: block;
+}
+
+.icon-box .icon-box-content {
+  padding-left: 0 !important;
+  padding-right: 25px;
+}
+
+
+.about-me {
+  color: #979797;
+}
+
+.about-me ul {
+  margin-right: 30px;
+}

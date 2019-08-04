@@ -9,7 +9,9 @@ class Layout extends Component {
 		super(props);
 	}
 	componentDidMount() {
-		document.getElementById('preloder').classList.add('hide-preloder')
+		window.onload = function () {
+			document.getElementById('preloder').classList.add('hide-preloder')
+		};
 	}
 
 	render() {

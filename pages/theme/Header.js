@@ -1,12 +1,12 @@
 import React, {Component} from "react"
-import Link from 'next/link';
+import Link from '../components/Link';
 
 class Header extends Component {
 	constructor(props) {
 		super(props);
-		this.handleClick = this.handleClick.bind(this);
+		this.responsiveBtn = this.responsiveBtn.bind(this);
 	}
-	handleClick(e) {
+	responsiveBtn(e) {
 		e.preventDefault();
 		let x = document.querySelector('.main-menu');
 		x.classList.add('animated','fadeIn');
@@ -25,15 +25,15 @@ class Header extends Component {
 							<Link href="contact"><a className="site-btn header-btn">همکاری</a></Link>
 						<nav className="main-menu">
 							<ul>
-								<li><Link href="/blog"><a>بلاگ</a></Link></li>
-								<li><Link href="/about"><a>درباره</a></Link></li>
-								<li><Link href="/contact"><a>تماس</a></Link></li>
+								<li><Link activeClassName='active' href="/blog"><a>بلاگ</a></Link></li>
+								<li><Link activeClassName='active' href="/about"><a>درباره</a></Link></li>
+								<li><Link activeClassName='active' href="/contact"><a>تماس</a></Link></li>
 							</ul>
 						</nav>
 					</div>
 				</div>
 			</div>
-			<div className="nav-switch" onClick={this.handleClick}>
+			<div className="nav-switch" onClick={this.responsiveBtn}>
 				<i className="fa fa-bars"/>
 			</div>
 		</header>

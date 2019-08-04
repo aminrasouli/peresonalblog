@@ -9,7 +9,6 @@
     "animate.css": "^3.7.2",
     "gray-matter": "^4.0.2",
     "next": "^9.0.3",
-    "next-nprogress": "^1.4.0",
     "node-sass": "^4.12.0",
     "nprogress": "^0.2.0",
     "react": "^16.8.6",

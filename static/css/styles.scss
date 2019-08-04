@@ -63,14 +63,6 @@ body {
   font-weight: 900;
   font-size: 40px;
 }
-.main-menu li:hover {
-  text-decoration: underline;
-  text-underline-position: under;
-}
-
-.main-menu a:hover {
-  text-decoration: underline;
-}
 
 .social-links a {
   font-size: 23px;
@@ -149,4 +141,14 @@ span.fa-instagram:hover {
 .hide-preloder {
   transition: height 500ms 500ms, opacity 500ms 0ms;
   display: none;
+}
+
+.main-menu ul li a:hover {
+  color:#0014185c
+}
+.main-menu ul li a.active {
+  color: #0014185c;
+}
+.main-menu ul li a.active:hover {
+  border-color: #0014185c;
 }

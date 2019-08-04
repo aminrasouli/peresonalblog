@@ -14,7 +14,6 @@ class Layout extends Component {
 
 	render() {
 		return <div>
-			{/* TODO:: add preloader */}
 			<div id="preloder" className="animated fadeOut">
 				<div className="loader"/>
 			</div>

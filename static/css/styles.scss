@@ -2,6 +2,7 @@
 @import "../../static/css/bootstrap.min.css";
 @import "../../static/css/style.css";
 @import "~animate.css/animate.css";
+@import "../../static/css/progress.css";
 
 @font-face {
   font-family: Sahel;
@@ -142,7 +143,10 @@ span.fa-instagram:hover {
 .about-me ul {
   margin-right: 30px;
 }
-
+.pre-loder {
+  transition: height 500ms 0ms, opacity 500ms 500ms;
+}
 .hide-preloder {
+  transition: height 500ms 500ms, opacity 500ms 0ms;
   display: none;
 }

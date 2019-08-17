@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Layout from './theme/Layout';
+import {NextSeo} from "next-seo";
 
 class About extends Component {
 	constructor(props) {
@@ -9,6 +10,10 @@ class About extends Component {
 
 	render() {
 		return <Layout>
+			<NextSeo
+				title="درباره ‌من"
+				titleTemplate = 'محمد‌امین رسولی | %s'
+			/>
 			<section className="intro-section">
 				<div className="container">
 					<div className="row">
@@ -25,24 +30,24 @@ class About extends Component {
 							<div>
 								<h3>زین دو هزاران من و ما، ای عجبا من چه منم؟</h3>
 								<br/>
-								<p>من ، محمد امین رسولی یک <a
-									href="https://en.wikipedia.org/wiki/Server-side_scripting">توسعه دهنده سمت سرور
-									(Back-end)</a> ، محصل ☹️&nbsp;،&nbsp;آشنا به <a
+								<p>من ، محمد‌امین رسولی یک <a
+									href="https://en.wikipedia.org/wiki/Server-side_scripting">توسعه‌دهنده سمت سرور
+									(Back-end)</a>،&nbsp;آشنا به <a
 									href="https://en.wikipedia.org/wiki/Front-end_web_development">طراحی وب
 									(Front-end)</a>&nbsp;و مسلط به <a href="http://wordpress.org">وردپرس </a>هستم
 									.&nbsp;به <a href="http://php.net">php</a> خیلی علاقه دارم از بین فریمورک های این
 									زبان&nbsp;<a href="http://laravel.com">لاراول&nbsp;</a>را میپسندم و مدتی هست که
-									درگیر جاوااسکریپت شدم و در حال کار با فریم ورک های اون هستم .</p>
+									درگیر جاوااسکریپت شدم و در حال کار با فریم ورک های آن هستم.</p>
 							</div>
 							<div>
-								<h4>علاقع مند به:</h4><br/>
+								<h4>علاقه‌مند به:</h4><br/>
 								<ul dir="rtl">
-									<li>یادگیری جاوااسکریپت و سایز زبان های اسکریپت نویسی</li>
-									<li>تحقیق و مطالعه درمورد شیوه&zwnj;های رمزنگاری اطلاعات و مباحث امنیت</li>
+									<li>یادگیری جاوا اسکریپت و سایز زبان های اسکریپت نویسی</li>
+									<li>تحقیق و مطالعه در مورد شیوه&zwnj;های رمزنگاری اطلاعات و مباحث امنیت</li>
 									<li>موسیقی پاپ و راک</li>
 									<li>رابط کاربری و تجربه کاربری (UI/UX)</li>
 									<li>مطالعه درباره &nbsp;هوافضا و فلسفه</li>
-									<li>مهندسی نرم افزار</li>
+									<li>مهندسی نرم‌افزار</li>
 									<li>قهوه &nbsp;☕</li>
 								</ul>
 								<br/>

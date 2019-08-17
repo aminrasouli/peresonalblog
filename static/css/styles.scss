@@ -3,36 +3,91 @@
 @import "../../static/css/style.css";
 @import "~animate.css/animate.css";
 @import "../../static/css/progress.css";
+@import "../../static/css/prismjs.css";
 
 @font-face {
-  font-family: Sahel;
-  src: url('/static/fonts/Sahel.eot');
-  src: url('/static/fonts/Sahel.eot?#iefix') format('embedded-opentype'),
-  url('/static/fonts/Sahel.woff') format('woff'),
-  url('/static/fonts/Sahel.ttf') format('truetype');
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: Sahel;
-  src: url('/static/fonts/Sahel-Bold.eot');
-  src: url('/static/fonts/Sahel-Bold.eot?#iefix') format('embedded-opentype'),
-  url('/static/fonts/Sahel-Bold.woff') format('woff'),
-  url('/static/fonts/Sahel-Bold.ttf') format('truetype');
+  font-family: iranyekan;
+  font-style: normal;
   font-weight: bold;
+  src: url('/static/fonts/eot/iranyekanwebbold.eot');
+  src: url('/static/fonts/eot/iranyekanwebbold.eot?#iefix') format('embedded-opentype'),
+  url('/static/fonts/woff/iranyekanwebbold.woff') format('woff'),
+  url('/static/fonts/ttf/iranyekanwebbold.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: Sahel;
-  src: url('/static/fonts/Sahel-Black.eot');
-  src: url('/static/fonts/Sahel-Black.eot?#iefix') format('embedded-opentype'),
-  url('/static/fonts/Sahel-Black.woff') format('woff'),
-  url('/static/fonts/Sahel-Black.ttf') format('truetype');
-  font-weight: 900;
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: 100;
+  src: url('/static/fonts/eot/iranyekanwebthin.eot');
+  src: url('/static/fonts/eot/iranyekanwebthin.eot?#iefix') format('embedded-opentype'),
+  url('/static/fonts/woff/iranyekanwebthin.woff') format('woff'),
+  url('/static/fonts/ttf/iranyekanwebthin.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: 300;
+  src: url('/static/fonts/eot/iranyekanweblight.eot');
+  src: url('/static/fonts/eot/iranyekanweblight.eot?#iefix') format('embedded-opentype'),
+  url('/static/fonts/woff/iranyekanweblight.woff') format('woff'),
+  url('/static/fonts/ttf/iranyekanweblight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: normal;
+  src: url('/static/fonts/eot/iranyekanwebregular.eot');
+  src: url('/static/fonts/eot/iranyekanwebregular.eot?#iefix') format('embedded-opentype'),
+  url('/static/fonts/woff/iranyekanwebregular.woff') format('woff'),
+  url('/static/fonts/ttf/iranyekanwebregular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: 500;
+  src: url('/static/fonts/eot/iranyekanwebmedium.eot');
+  src: url('/static/fonts/eot/iranyekanwebmedium.eot?#iefix') format('embedded-opentype'),
+  url('/static/fonts/woff/iranyekanwebmedium.woff') format('woff'),
+  url('/static/fonts/ttf/iranyekanwebmedium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: 800;
+  src: url('/static/fonts/eot/iranyekanwebextrabold.eot');
+  src: url('/static/fonts/eot/iranyekanwebextrabold.eot?#iefix') format('embedded-opentype'),
+  url('/static/fonts/woff/iranyekanwebextrabold.woff') format('woff'),
+  url('/static/fonts/ttf/iranyekanwebextrabold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: 900;
+  src: url('/static/fonts/eot/iranyekanwebblack.eot');
+  src: url('/static/fonts/eot/iranyekanwebblack.eot?#iefix') format('embedded-opentype'),
+  url('/static/fonts/woff/iranyekanwebblack.woff') format('woff'),
+  url('/static/fonts/ttf/iranyekanwebblack.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: 950;
+  src: url('/static/fonts/eot/iranyekanwebextrablack.eot');
+  src: url('/static/fonts/eot/iranyekanwebextrablack.eot?#iefix') format('embedded-opentype'),
+  url('/static/fonts/woff/iranyekanwebextrablack.woff') format('woff'),
+  url('/static/fonts/ttf/iranyekanwebextrablack.ttf') format('truetype');
+}
+
 html,
 body {
-  font-family: sahel  , serif;
+  font-family: iranyekan  , serif;
 }
 h1,
 h2,
@@ -40,7 +95,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: sahel  , serif;
+  font-family: iranyekan  , serif;
 }
 body {
   direction: rtl
@@ -48,15 +103,20 @@ body {
 .header-btn {
   float: left;
 }
-
+a {
+  color: #222f3e
+}
+a:hover {
+  color:#576574
+}
 .portfolio-item .pi-inner h2 {
   left: 0;
   right: 50px;
 }
 
 .site-logo {
-  font-size: 23px;
-  font-weight: bold;
+  font-size: 20px;
+  font-weight: 900;
 }
 
 .section-title {
@@ -151,4 +211,71 @@ span.fa-instagram:hover {
 }
 .main-menu ul li a.active:hover {
   border-color: #0014185c;
+}
+
+.blog-content h2 {
+  font-weight: 800;
+}
+.blog-content .blog-meta {
+  font-size: 16px;
+  font-weight: 400;
+}
+.blog-content p {
+  font-weight: 300;
+}
+
+.blog-meta {
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+blockquote:before {
+  color: #e6e6e6;
+  content: "\201C";
+  font-size: 84px;
+  right: -5px;
+  line-height: 1;
+  position: absolute;
+  top: -5px;
+}
+blockquote {
+  color: #777;
+  font-style: italic;
+  margin: 0 0 2.4em;
+  padding: 12px 44px 0 0;
+  position: relative;
+}
+
+.content-blog p {
+  color: black;
+  font-size: 17px;
+  font-weight: 300;
+}
+.content-blog {
+  margin-top: 15px
+}
+.angle-double {
+  float: right;
+  margin: 5px -44px 5px 15px;
+  font-size: 50px;
+}
+.angle-double:hover {
+  color:#576574;
+  cursor: pointer;
+}
+.blog-content .blog-meta {
+  margin-bottom: 15px;
+}
+.blog-single-meta {
+  font-size: 17px;
+  color: #979797;
 }

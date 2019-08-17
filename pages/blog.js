@@ -1,118 +1,96 @@
-import React, {Component} from "react"
+import React, { Component } from "react"
 import Layout from './theme/Layout';
 import "../static/css/styles.scss"
+import { NextSeo } from 'next-seo';
+import InfiniteScroll from 'react-infinite-scroll-component';
+import axios from "axios"
+import BlogLoader from "./components/BlogLoader";
+import BlogCard from "./components/BlogCard";
+import Helper from "./classes/helper";
 
 class Blog extends Component {
-	constructor(props) {
-		super(props);
-	}
 
-	render() {
-		return <Layout>
-			<section className="intro-section">
-				<div className="container">
-					<div className="row">
-						<div className="col-12">
-							<h2 className="section-title">بلاگ</h2>
-						</div>
-					</div>
-				</div>
-			</section>
-			<div className="page-section">
-				<div className="container">
-					<div className="row mb-5">
+    static perPage = 4;
 
-						<div className="col-md-6">
-							<div className="blog-item">
-								<figure className="thumb">
-									<img src="/static/img/blog/1.jpg" alt=""/>
-								</figure>
-								<article className="blog-content">
-									<h2>متن ستون برای فرهنگ نیاز است که نیاز</h2>
-									<div className="blog-meta">۲۰ دی ۱۳۹۵</div>
-									<p>داشت تا صورت طراحی رسد دشواری متخصصان مجله که زمان صنعت است هدف شامل شناخت با بلکه جامعه با بیشتری شرایط دستاوردهای حال چاپگرها می توان و متخصصان هدف جامعه به دنیای تولید شناخت نرم افزارها اهل.</p>
-									<a href="" className="read-more">بیشتر بخوانید</a>
-								</article>
-							</div>
-						</div>
+    constructor(props) {
+        super(props);
+        this.totalPage = props.totalPage || 1;
+        this.state = { currentPage: 1, data: props.data };
+    }
 
-						<div className="col-md-6">
-							<div className="blog-item">
-								<figure className="thumb">
-									<img src="/static/img/blog/2.jpg" alt=""/>
-								</figure>
-								<article className="blog-content">
-									<h2>و و و در چاپ استفاده این علیالخصوص</h2>
-									<div className="blog-meta">۲۰ دی ۱۳۹۵</div>
-									<p>داشت تا صورت طراحی رسد دشواری متخصصان مجله که زمان صنعت است هدف شامل شناخت با بلکه جامعه با بیشتری شرایط دستاوردهای حال چاپگرها می توان و متخصصان هدف جامعه به دنیای تولید شناخت نرم افزارها اهل.</p>
-									<a href="" className="read-more">بیشتر بخوانید</a>
-								</article>
-							</div>
-						</div>
+    static getInitialProps = () => Blog._getResponse();
 
-						<div className="col-md-6">
-							<div className="blog-item">
-								<figure className="thumb">
-									<img src="/static/img/blog/3.jpg" alt=""/>
-								</figure>
-								<article className="blog-content">
-									<h2>هدف برای در بیشتری داشت و زبان از</h2>
-									<div className="blog-meta">۲۰ دی ۱۳۹۵</div>
-									<p>داشت تا صورت طراحی رسد دشواری متخصصان مجله که زمان صنعت است هدف شامل شناخت با بلکه جامعه با بیشتری شرایط دستاوردهای حال چاپگرها می توان و متخصصان هدف جامعه به دنیای تولید شناخت نرم افزارها اهل.</p>
-									<a href="" className="read-more">بیشتر بخوانید</a>
-								</article>
-							</div>
-						</div>
+    static _getResponse = async (page = 1) => {
+        try {
+            const response = await axios.get(`https://rasouli.me/wp-json/wp/v2/posts?per_page=${Blog.perPage}&page=${page}`);
+            return { data: response.data, totalPage: parseInt(response.headers['x-wp-totalpages']) };
+        } catch (e) {
+            console.log(e);
+            return { data: [], totalPage: 1 };
+        }
+    }
 
-						<div className="col-md-6">
-							<div className="blog-item">
-								<figure className="thumb">
-									<img src="/static/img/blog/4.jpg" alt=""/>
-								</figure>
-								<article className="blog-content">
-									<h2>تمام استفاده فراوان موجود طراحان طراحان نرم افزارها با</h2>
-									<div className="blog-meta">۲۰ دی ۱۳۹۵</div>
-									<p>داشت تا صورت طراحی رسد دشواری متخصصان مجله که زمان صنعت است هدف شامل شناخت با بلکه جامعه با بیشتری شرایط دستاوردهای حال چاپگرها می توان و متخصصان هدف جامعه به دنیای تولید شناخت نرم افزارها اهل.</p>
-									<a href="" className="read-more">بیشتر بخوانید</a>
-								</article>
-							</div>
-						</div>
-						<div className="col-md-6">
-							<div className="blog-item">
-								<figure className="thumb">
-									<img src="/static/img/blog/5.jpg" alt=""/>
-								</figure>
-								<article className="blog-content">
-									<h2>جوابگوی داشت تولید قرار تمام در صورت که</h2>
-									<div className="blog-meta">۲۰ دی ۱۳۹۵</div>
-									<p>داشت تا صورت طراحی رسد دشواری متخصصان مجله که زمان صنعت است هدف شامل شناخت با بلکه جامعه با بیشتری شرایط دستاوردهای حال چاپگرها می توان و متخصصان هدف جامعه به دنیای تولید شناخت نرم افزارها اهل.</p>
-									<a href="" className="read-more">بیشتر بخوانید</a>
-								</article>
-							</div>
-						</div>
+    fetchMore = async () => {
+        let { currentPage, data = [] } = this.state;
+        currentPage++;
+        const response = await Blog._getResponse(currentPage);
+        this.setState({ ...response, data: [...data, ...response.data], currentPage });
+    }
 
-						<div className="col-md-6">
-							<div className="blog-item">
-								<figure className="thumb">
-									<img src="/static/img/blog/6.jpg" alt=""/>
-								</figure>
-								<article className="blog-content">
-									<h2>چاپگرها مورد علی الخصوص خلاقی می طلبد برای چاپگرها کاربردی</h2>
-									<div className="blog-meta">۲۰ دی ۱۳۹۵</div>
-									<p>داشت تا صورت طراحی رسد دشواری متخصصان مجله که زمان صنعت است هدف شامل شناخت با بلکه جامعه با بیشتری شرایط دستاوردهای حال چاپگرها می توان و متخصصان هدف جامعه به دنیای تولید شناخت نرم افزارها اهل.</p>
-									<a href="" className="read-more">بیشتر بخوانید</a>
-								</article>
-							</div>
-						</div>
-					</div>
-					<div className="text-center pt-5">
-						<button className="site-btn btn-fade">بیشتر</button>
-					</div>
-				</div>
-			</div>
-
-		</Layout>;
-	}
+    render() {
+        const { data = [], currentPage } = this.state;
+        return <Layout>
+            <NextSeo
+                title="بلاگ"
+                titleTemplate='محمد‌امین رسولی | %s'
+            />
+            <section className="intro-section">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12">
+                            <h2 className="section-title">بلاگ</h2>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div className="page-section">
+                <div className="container">
+                    <InfiniteScroll
+                        className="row mb-5"
+                        style={{
+                            height: 'unset',
+                            overflow: 'unset',
+                            marginRight: '5px'
+                        }}
+                        scrollThreshold={0.9}
+                        dataLength={data.length}
+                        next={this.fetchMore}
+                        hasMore={currentPage < this.totalPage}
+                        loader={<BlogLoader />}
+                        endMessage={
+                            <p style={{
+                                margin: 'auto',
+                                fontSize: '19px',
+                                fontWeight: '400',
+                                color: '#001418'
+                            }}>
+                                <b>بله :) شما تمام مطالب بلاگ رو دیدید</b>
+                            </p>}
+                    >
+                        {Array.isArray(data) && data.map((value, key) => (
+                            <BlogCard
+                                key={key}
+                                slug={value.slug}
+                                title={value.title.rendered}
+                                content={Helper.formatExpext(value.content.rendered)}
+                                date={Helper.formatDate(value.date)}
+                            />
+                        ))}
+                    </InfiniteScroll>
+                </div>
+            </div>
+        </Layout>;
+    }
 }
 
 export default Blog;

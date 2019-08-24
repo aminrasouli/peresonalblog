@@ -1,7 +1,8 @@
 import React, {Component} from "react"
-import Layout from './theme/Layout';
+import Layout from '../core/theme/Layout';
 import {NextSeo} from "next-seo";
-import CardProject from "./components/CardProject";
+import CardProject from "../core/components/CardProject";
+import Project from "../core/components/Project";
 
 class Index extends Component {
 
@@ -22,36 +23,7 @@ class Index extends Component {
 				</div>
 			</section>
 
-			<section className="portfolio-section">
-
-				<div className="container p-md-0 ">
-					<h3 className="project-title">پروژه ها</h3>
-					<hr/>
-					<div className="row portfolios-area">
-						<CardProject
-							title="نرم‌افزار مدیریت سفارشات ووکامرس"
-							img="/static/img/project/woodesktop.png"
-							date="۲۰ دی ۱۳۹۵"
-							details="#ElectronJS,ReactJs,BootStrap,Woocommerce"
-							href="http://atbox.io/mramin/projects/NyDrl"
-						/>
-						<CardProject
-							title="ویترین سایت اگهی و نیازمندی‌ها"
-							img="/static/img/project/vitrin.png"
-							date="۲۰ دی ۱۳۹۵"
-							details="#Laravel Framework,PHP,Bootstrap,Javascript,jQuery"
-							href="http://atbox.io/mramin/projects/K7Llr"
-						/>
-						<CardProject
-							title="رایاتار مجله تفریحی سرگرمی"
-							img="/static/img/project/rayatar.png"
-							date="۲۰ دی ۱۳۹۵"
-							details="#WordPress,HTML,CSS,Javascript,jQuery"
-							href="#"
-						/>
-					</div>
-				</div>
-			</section>
+			<Project/>
 
 		</Layout>;
 	}

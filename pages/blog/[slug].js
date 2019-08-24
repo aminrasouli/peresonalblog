@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import Layout from '../theme/Layout';
+import Layout from '../../core/theme/Layout';
 import {NextSeo} from "next-seo";
 import axios from "axios";
 import '../../static/js/prismjs'
-import Helper from "../classes/helper";
-import Link from "../components/Link";
+import Helper from "../../core/classes/helper";
+import Link from "../../core/components/Link";
 
 class BlogPost extends Component {
     constructor(props) {

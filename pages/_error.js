@@ -1,5 +1,5 @@
 import React, {Component} from "react"
-import Layout from './theme/Layout';
+import Layout from '../core/theme/Layout';
 import "../static/css/styles.scss"
 
 class Blog extends Component {

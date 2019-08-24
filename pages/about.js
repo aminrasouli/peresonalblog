@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Layout from './theme/Layout';
+import Layout from '../core/theme/Layout';
 import {NextSeo} from "next-seo";
 
 class About extends Component {

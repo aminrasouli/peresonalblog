@@ -1,12 +1,12 @@
 import React, { Component } from "react"
-import Layout from './theme/Layout';
+import Layout from '../core/theme/Layout';
 import "../static/css/styles.scss"
 import { NextSeo } from 'next-seo';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import axios from "axios"
-import BlogLoader from "./components/BlogLoader";
-import BlogCard from "./components/BlogCard";
-import Helper from "./classes/helper";
+import BlogLoader from "../core/components/BlogLoader";
+import BlogCard from "../core/components/BlogCard";
+import Helper from "../core/classes/helper";
 
 class Blog extends Component {
 

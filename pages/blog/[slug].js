@@ -3,10 +3,8 @@ import Layout from '../theme/Layout';
 import {NextSeo} from "next-seo";
 import axios from "axios";
 import '../../static/js/prismjs'
-
 import Helper from "../classes/helper";
 import Link from "../components/Link";
-import cheerio from "cheerio";
 
 class BlogPost extends Component {
     constructor(props) {
@@ -22,7 +20,15 @@ class BlogPost extends Component {
     };
 
     componentDidMount() {
-        window.Prism.highlightAll();
+        document.querySelectorAll('pre').forEach((pre) => {
+            if (pre.className.includes('jscript')) {
+                pre.className = pre.className.replace(/brush:\s*(.+?)\s*;/ig, 'language-javascript');
+            } else {
+                pre.className = pre.className.replace(/brush:\s*(.+?)\s*;/ig, 'language-$1 $1');
+            }
+            Prism.highlightElement(pre);
+        });
+
     }
 
     static async getInitialProps(context) {
@@ -35,13 +41,8 @@ class BlogPost extends Component {
         }
 
     };
-    render() {
-        const $ = cheerio.load(this.props.data.content.rendered);
-        $('pre').each((i, el) => {
-            let value = $(el).attr('class');
-            $(el).attr('class', value.replace( /brush:\s*(.+?)\s*;/ig , 'language-$1 $1' ));
 
-        });
+    render() {
         return <Layout>
             <NextSeo
                 title={this.props.data.title.rendered}
@@ -64,7 +65,7 @@ class BlogPost extends Component {
                                 </div>
                             </div>
                             <div className="content-blog"
-                                 dangerouslySetInnerHTML={{__html: $.html()}}
+                                 dangerouslySetInnerHTML={{__html: this.props.data.content.rendered}}
                             />
                         </div>
                     </div>

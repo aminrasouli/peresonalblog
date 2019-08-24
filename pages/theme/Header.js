@@ -22,7 +22,7 @@ class Header extends Component {
 						</div>
 					</div>
 					<div className="col-lg-10 col-md-9">
-							<Link href="contact"><a className="site-btn header-btn">رزومه</a></Link>
+							<a href="http://atbox.io/mramin/resume/pdf" className="site-btn header-btn">رزومه</a>
 						<nav className="main-menu">
 							<ul>
 								<li><Link activeClassName='active' href="/blog"><a>بلاگ</a></Link></li>

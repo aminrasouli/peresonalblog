@@ -140,6 +140,10 @@ a:hover {
   color: #001418 !important;
 }
 
+.footer-section {
+  padding: 50px 0;
+}
+
 span.fa {
   transition: border-color .2s ease-in-out,color .2s ease-in-out;
 }
@@ -278,4 +282,58 @@ blockquote {
 .blog-single-meta {
   font-size: 17px;
   color: #979797;
+}
+
+
+
+.card-project-title {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.card-project-time {
+  font-size: 16px;
+  font-weight: 400;
+  color: #979797;
+}
+
+.card-project-text {
+  width: 100%;
+  color: #001418;
+  direction: ltr;
+  float: left;
+  text-align: left;
+  font-size: 12px;
+  margin: 10px 0;
+  font-weight: 300
+}
+
+.card-project-button {
+  background: #000;
+  color: white;
+  border-radius: 0px;
+  min-width: 100px;
+  padding: 5px 0px;
+  border: none;
+}
+.card-project-button:hover,.card-project-button:active,.card-project-button:focus {
+  background: #000 !important;
+  box-shadow: none !important;
+}
+.card-project-img-mask {
+  transition: .1s ease-in-out;
+}
+.card-project-img-mask:hover {
+  transition: .1s ease-in-out;
+  background-color: #000000;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  opacity: 0.50;
+  -moz-opacity: 20%;
+  -webkit-opacity: 20%;
+  z-index: 2;
+}
+.project-title {
+  font-weight: 900;
 }

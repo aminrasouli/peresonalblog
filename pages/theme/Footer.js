@@ -6,8 +6,7 @@ class Footer extends Component {
 	render() {
 		return <footer className="footer-section text-center">
 			<div className="container">
-				<h2 className="section-title mb-5">همکاری کنیم؟</h2>
-				<Link href="/contact"><a className="site-btn">ارتباط با من</a></Link>
+
 				<div className="social-links">
 					<a href=""><span className="fa fa-telegram"/></a>
 					<a href=""><span className="fa fa-instagram"/></a>

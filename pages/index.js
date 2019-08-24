@@ -1,6 +1,7 @@
 import React, {Component} from "react"
 import Layout from './theme/Layout';
 import {NextSeo} from "next-seo";
+import CardProject from "./components/CardProject";
 
 class Index extends Component {
 
@@ -22,35 +23,32 @@ class Index extends Component {
 			</section>
 
 			<section className="portfolio-section">
-				<div className="container">
-				</div>
-				<div className="container p-md-0 ">
-					<div className="row portfolios-area">
-						<div className="mix col-lg-4 col-md-6 web">
-							<a href="#" className="portfolio-item set-bg"
-							   style={{backgroundImage: `url("/static/img/project/woodekstop.png")`}}>
-								<div className="pi-inner">
-									<h2>مشاهده پروژه +</h2>
-								</div>
-							</a>
-						</div>
-						<div className="mix col-lg-4 col-md-6 digital">
-							<a href="#" className="portfolio-item set-bg"
-							   style={{backgroundImage: `url("/static/img/project/4.jpg")`}}>
-								<div className="pi-inner">
-									<h2>مشاهده پروژه +</h2>
-								</div>
-							</a>
-						</div>
-						<div className="mix col-lg-4 col-md-6 rened">
-							<a href="#" className="portfolio-item set-bg"
-							   style={{backgroundImage: `url("/static/img/project/5.jpg")`}}>
-								<div className="pi-inner">
-									<h2>مشاهده پروژه +</h2>
-								</div>
-							</a>
-						</div>
 
+				<div className="container p-md-0 ">
+					<h3 className="project-title">پروژه ها</h3>
+					<hr/>
+					<div className="row portfolios-area">
+						<CardProject
+							title="نرم‌افزار مدیریت سفارشات ووکامرس"
+							img="/static/img/project/woodesktop.png"
+							date="۲۰ دی ۱۳۹۵"
+							details="#ElectronJS,ReactJs,BootStrap,Woocommerce"
+							href="http://atbox.io/mramin/projects/NyDrl"
+						/>
+						<CardProject
+							title="ویترین سایت اگهی و نیازمندی‌ها"
+							img="/static/img/project/vitrin.png"
+							date="۲۰ دی ۱۳۹۵"
+							details="#Laravel Framework,PHP,Bootstrap,Javascript,jQuery"
+							href="http://atbox.io/mramin/projects/K7Llr"
+						/>
+						<CardProject
+							title="رایاتار مجله تفریحی سرگرمی"
+							img="/static/img/project/rayatar.png"
+							date="۲۰ دی ۱۳۹۵"
+							details="#WordPress,HTML,CSS,Javascript,jQuery"
+							href="#"
+						/>
 					</div>
 				</div>
 			</section>

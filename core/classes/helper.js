@@ -1,4 +1,6 @@
 import moment from "jalali-moment";
+import Router from 'next/router';
+import { useRouter } from 'next/router'
 
 class Helper {
     static formatDate(date) {
@@ -49,6 +51,11 @@ class Helper {
         str=str.replace("&hellip;", "");
         return str;
     }
-
+    static isRoute(route) {
+        if (typeof window === "undefined") {
+            return useRouter.pathname === route
+        }
+        return Router.pathname === route
+    }
 }
 export default  Helper;

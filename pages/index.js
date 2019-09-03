@@ -3,6 +3,8 @@ import Layout from '../core/theme/Layout';
 import {NextSeo} from "next-seo";
 import CardProject from "../core/components/CardProject";
 import Project from "../core/components/Project";
+import SocialLink from "../core/components/SocialLink";
+import Helper from "../core/classes/helper";
 
 class Index extends Component {
 
@@ -22,7 +24,7 @@ class Index extends Component {
 					</div>
 				</div>
 			</section>
-
+			<SocialLink isShow={Helper.isRoute('/')}/>
 			<Project/>
 
 		</Layout>;

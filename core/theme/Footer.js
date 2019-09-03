@@ -1,27 +1,24 @@
 import React, {Component} from "react"
-import Link from 'next/link';
+import SocialLink from "../components/SocialLink";
+import Helper from "../classes/helper";
 
 class Footer extends Component {
 
 	render() {
+		console.log(Helper.isRoute('/'));
 		return <footer className="footer-section text-center">
 			<div className="container">
+				<div className="copyright">
 
-				<div className="social-links">
-					<a href=""><span className="fa fa-telegram"/></a>
-					<a href=""><span className="fa fa-instagram"/></a>
-					<a href=""><span className="fa fa-twitter"/></a>
-					<a href=""><span className="fa fa-github"/></a>
-					<a href=""><span className="fa fa-gitlab"/></a>
-				</div>
-				<div
-					className="copyright">
-					 &copy; کپی رایت
+				<SocialLink isShow={!Helper.isRoute('/')}/>
+
+					&copy; کپی رایت
 					{' ۱۳۹۸ '} <br/>
 					مطالب تحت لیسانس کریتیو کامنز منتشر می‌شوند. <br/>
 					ساخته شده با <i className="fa fa-heart-o"
 									aria-hidden="true"/>
 				</div>
+
 			</div>
 		</footer>
 			;

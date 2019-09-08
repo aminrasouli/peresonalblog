@@ -35,6 +35,11 @@ p {
 
 img {
   max-width: 100%;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
 }
 
 input:focus,
@@ -520,8 +525,8 @@ ol {
 }
 
 .social-links {
-  margin-top: 60px;
-  margin-bottom: 40px;
+  margin-top: 10px;
+  margin-bottom: 50px;
 }
 
 .social-links a {

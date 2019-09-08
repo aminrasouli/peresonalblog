@@ -1,44 +1,58 @@
 import React, {Component} from "react"
 import Link from '../components/Link';
+import Head from 'next/head'
 
 class Header extends Component {
-	constructor(props) {
-		super(props);
-		this.responsiveBtn = this.responsiveBtn.bind(this);
-	}
-	responsiveBtn(e) {
-		e.preventDefault();
-		let x = document.querySelector('.main-menu');
-		x.classList.add('animated','fadeIn');
-		x.classList.toggle('show-main-menu');
-	}
-	render() {
-		return <header className="header-section">
-			<div className="container">
-				<div className="row">
-					<div className="col-lg-2 col-md-3">
-						<div className="logo">
-							<h2 className="site-logo"><Link href="/"><a>محمد‌امین رسولی</a></Link></h2>
-						</div>
-					</div>
-					<div className="col-lg-10 col-md-9">
-							<a href="http://atbox.io/mramin/resume/pdf" className="site-btn header-btn">رزومه</a>
-						<nav className="main-menu">
-							<ul>
-								<li><Link activeClassName='active' href="/blog"><a>بلاگ</a></Link></li>
-								<li><Link activeClassName='active' href="/about"><a>درباره</a></Link></li>
-								<li><Link activeClassName='active' href="/contact"><a>تماس</a></Link></li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</div>
-			<div className="nav-switch" onClick={this.responsiveBtn}>
-				<i className="fa fa-bars"/>
-			</div>
-		</header>
-			;
-	}
+    constructor(props) {
+        super(props);
+        this.responsiveBtn = this.responsiveBtn.bind(this);
+    }
+
+    responsiveBtn(e) {
+        e.preventDefault();
+        let x = document.querySelector('.main-menu');
+        x.classList.add('animated', 'fadeIn');
+        x.classList.toggle('show-main-menu');
+    }
+
+    render() {
+        return <header className="header-section">
+            <Head>
+                <link rel="manifest" href="/static/manifest.json"/>
+                <link rel="icon" type="image/png" sizes="32x32" href="/static/img/icon/favicon-32x32.png"/>
+                <link rel="icon" type="image/png" sizes="16x16" href="/static/img/icon/favicon-16x16.png"/>
+                <meta name="theme-color" content="#ffffff"/>
+
+				<link rel="apple-touch-icon" sizes="180x180" href="/static/img/icon/apple-touch-icon.png"/>
+                <meta name="apple-mobile-web-app-capable" content="yes"/>
+                <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+                <meta name="apple-mobile-web-app-title" content="Weather PWA"/>
+            </Head>
+            <div className="container">
+                <div className="row">
+                    <div className="col-lg-2 col-md-3">
+                        <div className="logo">
+                            <h2 className="site-logo"><Link href="/"><a>محمد‌امین رسولی</a></Link></h2>
+                        </div>
+                    </div>
+                    <div className="col-lg-10 col-md-9">
+                        <a href="http://atbox.io/mramin/resume/pdf" className="site-btn header-btn">رزومه</a>
+                        <nav className="main-menu">
+                            <ul>
+                                <li><Link activeClassName='active' href="/blog"><a>بلاگ</a></Link></li>
+                                <li><Link activeClassName='active' href="/about"><a>درباره</a></Link></li>
+                                <li><Link activeClassName='active' href="/contact"><a>تماس</a></Link></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div className="nav-switch" onClick={this.responsiveBtn}>
+                <i className="fa fa-bars"/>
+            </div>
+        </header>
+            ;
+    }
 }
 
 export default Header;

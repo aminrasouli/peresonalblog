@@ -11,7 +11,7 @@ class Index extends Component {
 	render() {
 		return <Layout>
 			<NextSeo
-				title="خانه"
+				title="صفحه اصلی"
 				titleTemplate = 'محمد‌امین رسولی | %s'
 			/>
 			<section className="intro-section">

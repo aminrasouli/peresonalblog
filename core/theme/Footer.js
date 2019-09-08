@@ -5,7 +5,6 @@ import Helper from "../classes/helper";
 class Footer extends Component {
 
 	render() {
-		console.log(Helper.isRoute('/'));
 		return <footer className="footer-section text-center">
 			<div className="container">
 				<div className="copyright">

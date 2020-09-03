@@ -404,7 +404,7 @@ ol {
     Portfolio Section
 --------------------------*/
 .portfolio-section {
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 .portfolio-filter {

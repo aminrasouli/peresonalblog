@@ -87,28 +87,35 @@
 
 html,
 body {
-  font-family: iranyekan  , serif;
+  font-family: iranyekan, serif;
+  background: #fafafa;
 }
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: iranyekan  , serif;
+  font-family: iranyekan, serif;
 }
+
 body {
   direction: rtl
 }
+
 .header-btn {
   float: left;
 }
+
 a {
   color: #222f3e
 }
+
 a:hover {
-  color:#576574
+  color: #576574
 }
+
 .portfolio-item .pi-inner h2 {
   left: 0;
   right: 50px;
@@ -126,7 +133,7 @@ a:hover {
 
 .social-links a {
   font-size: 23px;
-  transition: border-color .2s ease-in-out,color .2s ease-in-out;
+  transition: border-color .2s ease-in-out, color .2s ease-in-out;
 }
 
 .social-links a {
@@ -136,6 +143,7 @@ a:hover {
 .site-logo a {
   color: #001418 !important;
 }
+
 .site-logo a:hover {
   color: #001418 !important;
 }
@@ -145,23 +153,29 @@ a:hover {
 }
 
 span.fa {
-  transition: border-color .2s ease-in-out,color .2s ease-in-out;
+  transition: border-color .2s ease-in-out, color .2s ease-in-out;
 }
+
 span.fa:hover {
-  transition: border-color .2s ease-in-out,color .2s ease-in-out;
+  transition: border-color .2s ease-in-out, color .2s ease-in-out;
 }
+
 span.fa-gitlab:hover {
   color: #FC6D27;
 }
+
 span.fa-github:hover {
   color: #333;
 }
+
 span.fa-twitter:hover {
   color: #55acee;
 }
+
 span.fa-telegram:hover {
   color: #0088cc;
 }
+
 span.fa-instagram:hover {
   color: #d6249f;
 }
@@ -199,20 +213,24 @@ span.fa-instagram:hover {
 .about-me ul {
   margin-right: 30px;
 }
+
 .pre-loder {
   transition: height 500ms 0ms, opacity 500ms 500ms;
 }
+
 .hide-preloder {
   transition: height 500ms 500ms, opacity 500ms 0ms;
   display: none;
 }
 
 .main-menu ul li a:hover {
-  color:#0014185c
+  color: #0014185c
 }
+
 .main-menu ul li a.active {
   color: #0014185c;
 }
+
 .main-menu ul li a.active:hover {
   border-color: #0014185c;
 }
@@ -220,10 +238,12 @@ span.fa-instagram:hover {
 .blog-content h2 {
   font-weight: 800;
 }
+
 .blog-content .blog-meta {
   font-size: 16px;
   font-weight: 400;
 }
+
 .blog-content p {
   font-weight: 300;
 }
@@ -242,6 +262,7 @@ span.fa-instagram:hover {
   margin-right: auto;
   margin-left: auto;
 }
+
 blockquote:before {
   color: #e6e6e6;
   content: "\201C";
@@ -251,6 +272,7 @@ blockquote:before {
   position: absolute;
   top: -5px;
 }
+
 blockquote {
   color: #777;
   font-style: italic;
@@ -264,26 +286,30 @@ blockquote {
   font-size: 17px;
   font-weight: 300;
 }
+
 .content-blog {
   margin-top: 15px
 }
+
 .angle-double {
   float: right;
   margin: 5px -44px 5px 15px;
   font-size: 50px;
 }
+
 .angle-double:hover {
-  color:#576574;
+  color: #576574;
   cursor: pointer;
 }
+
 .blog-content .blog-meta {
   margin-bottom: 15px;
 }
+
 .blog-single-meta {
   font-size: 17px;
   color: #979797;
 }
-
 
 
 .card-project-title {
@@ -316,13 +342,16 @@ blockquote {
   padding: 5px 0px;
   border: none;
 }
-.card-project-button:hover,.card-project-button:active,.card-project-button:focus {
+
+.card-project-button:hover, .card-project-button:active, .card-project-button:focus {
   background: #000 !important;
   box-shadow: none !important;
 }
+
 .card-project-img-mask {
   transition: .1s ease-in-out;
 }
+
 .card-project-img-mask:hover {
   transition: .1s ease-in-out;
   background-color: #000000;
@@ -334,6 +363,16 @@ blockquote {
   -webkit-opacity: 20%;
   z-index: 2;
 }
+
 .project-title {
   font-weight: 900;
+}
+
+.footer-section {
+  background: linear-gradient(180deg, rgba(217, 219, 224, 0) 0%, #D9DBE0 100%);
+}
+
+.card {
+  box-shadow: 0 30px 60px -10px rgba(0, 0, 0, 0.2), 0 18px 36px -18px rgba(0, 0, 0, 0.22);
+  border: none;
 }
